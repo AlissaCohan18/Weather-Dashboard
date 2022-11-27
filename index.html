@@ -14,30 +14,48 @@
     >
       Weather Dashboard
     </header>
-    <form>
-      <label>
-        Search for a city:
-        <input type="text" />
-      </label>
-      <button>Search</button>
-    </form>
-    <section>
-      <h3>5 Day Forecast:</h3>
-      <div class="card text-white bg-primary mb-3" style="max-width: 20rem" id="day1">
-        <div class="card-header">9/14/22</div>
-        <div class="card-body">
-          <h4 class="card-title">☔️</h4>
-          <p class="card-text">
-            Temp:
-          </p>
-          <p class="card-text">
-            Wind:
-          </p>
-          <p class="card-text">
-            Humidity:
-          </p>
+    <div class="sidenav">
+      <form>
+        <div class="form-group">
+          <label for="citySearch" class="form-label mt-4"
+            >Search for a City</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="citySearch"
+            placeholder="Enter City"
+          />
         </div>
-      </div>
-    </section>
+        <div class="d-grid gap-2">
+          <button class="btn btn-lg btn-primary" type="button">Search</button>
+          <button class="btn btn-lg btn-secondary" type="button">History City</button>
+        </div>
+      </form>
+    </div>
+    <main>
+      <section class="currentDayBlock">
+        <h3>Atlanta (9/13/22) 🌤️</h3>
+        <p>Temp:</p>
+        <p>Wind:</p>
+        <p>Humidity:</p>
+      </section>
+      <section class="fiveDayBlock">
+        <h3>5 Day Forecast:</h3>
+        <div
+          class="card text-white bg-primary mb-3"
+          style="max-width: 20rem"
+          id="day1"
+        >
+          <div class="card-header">9/14/22</div>
+          <div class="card-body">
+            <h4 class="card-title">☔️</h4>
+            <p class="card-text">Temp:</p>
+            <p class="card-text">Wind:</p>
+            <p class="card-text">Humidity:</p>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

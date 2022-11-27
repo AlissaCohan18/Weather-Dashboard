@@ -1,0 +1,33 @@
+.navbar {
+    font-size:xx-large;
+    font-display: center;
+}
+
+/* The sidebar menu */
+.sidenav {
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    margin-left: 10px;
+    padding-top: 55px;
+    font-size: x-large;
+  }
+  
+  /* Style page content */
+main {
+    margin-left: 350px; /* Right of the sidebar */
+    margin-top: 10px;
+  }
+  
+.currentDayBlock {
+    border: 3px black solid;
+}
+
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
