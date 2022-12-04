@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .navbar {
     font-size:xx-large;
     font-display: center;
@@ -22,8 +26,16 @@ main {
     margin-top: 10px;
   }
   
-.currentDayBlock {
+.todayBlock {
     border: 3px black solid;
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.card {
+  display: inline-block;
+  width: 18%;
 }
 
   /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */

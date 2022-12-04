@@ -29,33 +29,98 @@
         </div>
         <div class="d-grid gap-2">
           <button class="btn btn-lg btn-primary" type="button">Search</button>
-          <button class="btn btn-lg btn-secondary" type="button">History City</button>
+          <button class="btn btn-lg btn-secondary" type="button">
+            History City
+          </button>
         </div>
       </form>
     </div>
     <main>
-      <section class="currentDayBlock">
-        <h3>Atlanta (9/13/22) 🌤️</h3>
-        <p>Temp:</p>
-        <p>Wind:</p>
-        <p>Humidity:</p>
+      <section class="todayBlock" id="todayLook">
+        <h3 id="cityName">Atlanta (9/13/22) 🌤️</h3>
+        <h5 id="currentDay"></h5>
+        <br>
+        <p id="temp0">Temp:</p>
+        <p id="wind0">Wind:</p>
+        <p id="humidity0">Humidity:</p>
       </section>
       <section class="fiveDayBlock">
         <h3>5 Day Forecast:</h3>
+        <section id="fiveDayLook"></section>
+        <!-- Day 1 Card -->
         <div
           class="card text-white bg-primary mb-3"
           style="max-width: 20rem"
           id="day1"
         >
-          <div class="card-header">9/14/22</div>
+          <div class="card-header" id="date1">9/14/22</div>
           <div class="card-body">
-            <h4 class="card-title">☔️</h4>
-            <p class="card-text">Temp:</p>
-            <p class="card-text">Wind:</p>
-            <p class="card-text">Humidity:</p>
+            <h4 class="card-title" id="symbol1">☔️</h4>
+            <p class="card-text" id="temp1">Temp:</p>
+            <p class="card-text" id="wind1">Wind:</p>
+            <p class="card-text" id="humidity1">Humidity:</p>
+          </div>
+        </div>
+        <!-- Day 2 Card -->
+        <div
+          class="card text-white bg-primary mb-3"
+          style="max-width: 20rem"
+          id="day2"
+        >
+        <div class="card-header" id="date2">9/14/22</div>
+        <div class="card-body">
+          <h4 class="card-title" id="symbol2">☔️</h4>
+          <p class="card-text" id="temp2">Temp:</p>
+          <p class="card-text" id="wind2">Wind:</p>
+          <p class="card-text" id="humidity2">Humidity:</p>
+          </div>
+        </div>
+        <!-- Day 3 Card -->
+        <div
+          class="card text-white bg-primary mb-3"
+          style="max-width: 20rem"
+          id="day3"
+        >
+        <div class="card-header" id="date3">9/14/22</div>
+        <div class="card-body">
+          <h4 class="card-title" id="symbol3">☔️</h4>
+          <p class="card-text" id="temp3">Temp:</p>
+          <p class="card-text" id="wind3">Wind:</p>
+          <p class="card-text" id="humidity3">Humidity:</p>
+          </div>
+        </div>
+        <!-- Day 4 Card -->
+        <div
+          class="card text-white bg-primary mb-3"
+          style="max-width: 20rem"
+          id="day4"
+        >
+        <div class="card-header" id="date4">9/14/22</div>
+        <div class="card-body">
+          <h4 class="card-title" id="symbol4">☔️</h4>
+          <p class="card-text" id="temp4">Temp:</p>
+          <p class="card-text" id="wind4">Wind:</p>
+          <p class="card-text" id="humidity4">Humidity:</p>
+          </div>
+        </div>
+        <!-- Day 5 Card -->
+        <div
+          class="card text-white bg-primary mb-3"
+          style="max-width: 20rem"
+          id="day5"
+        >
+        <div class="card-header" id="date5">9/14/22</div>
+        <div class="card-body">
+          <h4 class="card-title" id="symbol5">☔️</h4>
+          <p class="card-text" id="temp5">Temp:</p>
+          <p class="card-text" id="wind5">Wind:</p>
+          <p class="card-text" id="humidity5">Humidity:</p>
           </div>
         </div>
       </section>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
