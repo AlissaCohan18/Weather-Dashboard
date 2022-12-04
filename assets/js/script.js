@@ -6,31 +6,37 @@ var lonCoord;
 
 var idCitySearchEl = document.getElementById("idCitySearch");
 
+var symbolEl = document.getElementById("symbol")
 var cityNameEl = document.getElementById("cityName");
 var tempEl = document.getElementById("temp0");
 var windEl = document.getElementById("wind0");
 var humidityEl = document.getElementById("humidity0");
 
+var symbolEl1 = document.getElementById("symbol1")
 var dateEl1 = document.getElementById("date1");
 var tempEl1 = document.getElementById("temp1");
 var windEl1 = document.getElementById("wind1");
 var humidityEl1 = document.getElementById("humidity1");
 
+var symbolEl2 = document.getElementById("symbol2")
 var dateEl2 = document.getElementById("date2");
 var tempEl2 = document.getElementById("temp2");
 var windEl2 = document.getElementById("wind2");
 var humidityEl2 = document.getElementById("humidity2");
 
+var symbolEl3 = document.getElementById("symbol3")
 var dateEl3 = document.getElementById("date3");
 var tempEl3 = document.getElementById("temp3");
 var windEl3 = document.getElementById("wind3");
 var humidityEl3 = document.getElementById("humidity3");
 
+var symbolEl4 = document.getElementById("symbol4")
 var dateEl4 = document.getElementById("date4");
 var tempEl4 = document.getElementById("temp4");
 var windEl4 = document.getElementById("wind4");
 var humidityEl4 = document.getElementById("humidity4");
 
+var symbolEl5 = document.getElementById("symbol5")
 var dateEl5 = document.getElementById("date5");
 var tempEl5 = document.getElementById("temp5");
 var windEl5 = document.getElementById("wind5");
@@ -67,7 +73,7 @@ fetchCoordinates(city);
 function displayWeather(data) {
   lonCoord = data.coord.lon;
   latCoord = data.coord.lat;
-
+     
   fetch(
     "https://api.openweathermap.org/data/2.5/forecast?lat=" +
       latCoord +
@@ -87,11 +93,6 @@ function fetchWeather(data1) {
   var now = moment().format("MMMM Do YYYY");
   $(currentDay).text(now);
 
-  //Function to retrieve the data entered in search
-  // function search() {
-  //         this.fetchWeather(document.querySelector(".search_btn").value);
-  //       }
-
   //add only new cities to history array and create a button
   if (allCities.includes(data1.city.name) == false) {
     allCities.push(data1.city.name);
@@ -103,37 +104,41 @@ function fetchWeather(data1) {
   }
 
   //converts all of the weather api data to text on the page for each day
+  symbolEl.setAttribute("src", "https://openweathermap.org/img/wn/" + data1.list[0].weather[0].icon + ".png");
   tempEl.textContent = "Temp: " + data1.list[0].main.temp;
   windEl.textContent = "Wind: " + data1.list[0].main.humidity;
   humidityEl.textContent = "Humidity: " + data1.list[0].wind.speed;
 
+  symbolEl1.setAttribute("src", "https://openweathermap.org/img/wn/" + data1.list[1].weather[0].icon + ".png");
   dateEl1.textContent = moment().add(1, "days").format("l");
   tempEl1.textContent = "Temp: " + data1.list[1].main.temp;
   windEl1.textContent = "Wind: " + data1.list[1].main.humidity;
   humidityEl1.textContent = "Humidity: " + data1.list[1].wind.speed;
 
+  symbolEl2.setAttribute("src", "https://openweathermap.org/img/wn/" + data1.list[2].weather[0].icon + ".png");
   dateEl2.textContent = moment().add(2, "days").format("l");
   tempEl2.textContent = "Temp: " + data1.list[2].main.temp;
   windEl2.textContent = "Wind: " + data1.list[2].main.humidity;
   humidityEl2.textContent = "Humidity: " + data1.list[2].wind.speed;
 
+  symbolEl3.setAttribute("src", "https://openweathermap.org/img/wn/" + data1.list[3].weather[0].icon + ".png");
   dateEl3.textContent = moment().add(3, "days").format("l");
   tempEl3.textContent = "Temp: " + data1.list[3].main.temp;
   windEl3.textContent = "Wind: " + data1.list[3].main.humidity;
   humidityEl3.textContent = "Humidity: " + data1.list[3].wind.speed;
 
+  symbolEl4.setAttribute("src", "https://openweathermap.org/img/wn/" + data1.list[4].weather[0].icon + ".png");
   dateEl4.textContent = moment().add(4, "days").format("l");
   tempEl4.textContent = "Temp: " + data1.list[4].main.temp;
   windEl4.textContent = "Wind: " + data1.list[4].main.humidity;
   humidityEl4.textContent = "Humidity: " + data1.list[4].wind.speed;
 
+  symbolEl5.setAttribute("src", "https://openweathermap.org/img/wn/" + data1.list[5].weather[0].icon + ".png");
   dateEl5.textContent = moment().add(5, "days").format("l");
   tempEl5.textContent = "Temp: " + data1.list[5].main.temp;
   windEl5.textContent = "Wind: " + data1.list[5].main.humidity;
   humidityEl5.textContent = "Humidity: " + data1.list[5].wind.speed;
 }
-
-// TODO: Add icon for each of the 6 days
 
 $(".search_btn").on("click", function () {
   fetchCoordinates(idCitySearch.value);
