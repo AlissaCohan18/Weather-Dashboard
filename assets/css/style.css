@@ -20,13 +20,13 @@
   font-size: x-large;
 }
 
-.search_btn, #clear {
-  margin-top: 10px;
-  margin-bottom: 10px;
+.search_btn {
+    margin-bottom: 10px;
 }
 
 #clear {
   background-color: lightpink;
+  margin-top: 10px;
 }
 
 /* Style page content */
