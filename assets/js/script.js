@@ -4,8 +4,6 @@ var apiKey = "2d7a4c5927b560838f4ca31749bda05b";
 var latCoord;
 var lonCoord;
 
-var idCitySearchEl = document.getElementById("idCitySearch");
-
 var symbolEl = document.getElementById("symbol")
 var cityNameEl = document.getElementById("cityName");
 var tempEl = document.getElementById("temp0");
@@ -103,7 +101,7 @@ function fetchWeather(data1) {
     document.querySelector(".history").appendChild(historyEl);
   }
 
-  //converts all of the weather api data to text on the page for each day
+  //displays today and 5-day forecast details
   symbolEl.setAttribute("src", "https://openweathermap.org/img/wn/" + data1.list[0].weather[0].icon + ".png");
   tempEl.textContent = "Temp: " + data1.list[0].main.temp;
   windEl.textContent = "Wind: " + data1.list[0].main.humidity;
@@ -140,9 +138,18 @@ function fetchWeather(data1) {
   humidityEl5.textContent = "Humidity: " + data1.list[5].wind.speed;
 }
 
+// Event listener for search, click search button
 $(".search_btn").on("click", function () {
   fetchCoordinates(idCitySearch.value);
   $("#idCitySearch").val("");
+});
+
+// Event listener for search, hitting enter
+document.getElementById('idCitySearch').addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    fetchCoordinates(idCitySearch.value);
+    $("#idCitySearch").val("");
+  }
 });
 
 // Event listener for click on historical search buttons
