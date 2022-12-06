@@ -159,3 +159,9 @@ $(".history").on("click", (event) => {
     fetchCoordinates(event.target.innerText);
   }
 });
+
+//clears users' local storage & refreshes page
+$("#clear").click(function () {
+  localStorage.clear();
+  location.reload();
+});

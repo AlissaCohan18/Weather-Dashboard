@@ -20,6 +20,15 @@
   font-size: x-large;
 }
 
+.search_btn, #clear {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#clear {
+  background-color: lightpink;
+}
+
 /* Style page content */
 main {
   width: 80%;
